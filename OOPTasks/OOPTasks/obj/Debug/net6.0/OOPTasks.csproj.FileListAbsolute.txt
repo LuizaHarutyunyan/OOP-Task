@@ -1,0 +1,15 @@
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\bin\Debug\net6.0\OOPTasks.exe
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\bin\Debug\net6.0\OOPTasks.deps.json
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\bin\Debug\net6.0\OOPTasks.runtimeconfig.json
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\bin\Debug\net6.0\OOPTasks.dll
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\bin\Debug\net6.0\OOPTasks.pdb
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\obj\Debug\net6.0\OOPTasks.csproj.AssemblyReference.cache
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\obj\Debug\net6.0\OOPTasks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\obj\Debug\net6.0\OOPTasks.AssemblyInfoInputs.cache
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\obj\Debug\net6.0\OOPTasks.AssemblyInfo.cs
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\obj\Debug\net6.0\OOPTasks.csproj.CoreCompileInputs.cache
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\obj\Debug\net6.0\OOPTasks.dll
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\obj\Debug\net6.0\refint\OOPTasks.dll
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\obj\Debug\net6.0\OOPTasks.pdb
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\obj\Debug\net6.0\OOPTasks.genruntimeconfig.cache
+C:\Users\louis\OneDrive\Desktop\OOP Task\OOPTasks\OOPTasks\obj\Debug\net6.0\ref\OOPTasks.dll
