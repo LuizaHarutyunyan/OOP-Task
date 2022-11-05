@@ -8,24 +8,26 @@ namespace Task6
 {
     public class ColoredLightstring : Lightstring
     {
-        private List<ColoredBulb> bulbs;
+
+
         public ColoredLightstring(int length)
         {
-            List<ColoredBulb> bulbs = new List<ColoredBulb>();
+            List<Bulb> bulbs = new List<Bulb>();
             for (int i = 1; i <= length; i++)
             {
-                bulbs.Add(ColorFactory.createColoredBulb(i));
+                bulbs.Add(BulbFactory.createColoredBulb(i));
             }
             this.bulbs = bulbs;
         }
 
 
-        public void printBulbsState(int minute)
+        public override void printLightstringState()
         {
-            for (int i = 0; i < bulbs.Count; i++)
+            DateTime now = DateTime.Now;
+            foreach (Bulb bulb in bulbs)
             {
-                string state = i % 2 == 0 ? "ON" : "OFF";
-                Console.WriteLine(bulbs[i].getColor() + "-" + state);
+                string state = bulb.IsOn(now) ? "ON" : "OFF";
+                Console.WriteLine(((ColoredBulb)bulb).getColor() + "-" + state);
             }
         }
     }

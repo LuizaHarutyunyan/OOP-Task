@@ -1,14 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-
+using System.Globalization;
 using Task5;
 
-use Task5;
+int[] arr1 = new[] { 0,1,2,3 };
+int[] arr2 = new[] { 0,5,6 , 2};
 
-Polynomial firstPol = new Polynomial(3);
-Polynomial secondPol = new Polynomial(4,2);
-Polynomial thirdPol = new Polynomial(5,5);
-Polynomial forthPol = new Polynomial(12,7);
+var polynomial1 = new Polynomial(arr1);
+var polynomial2 = new Polynomial(arr2);
 
-Polynomial result = -firstPol + secondPol + thirdPol - forthPol;
-Console.WriteLine(result.toString());
+var result = polynomial1 + polynomial2;
+
+Console.WriteLine(result);
+
+// [0,1] [0,2]  x*2x = 2xy^2   [0,0,2]  [0,0,1] [0,1]  

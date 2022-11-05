@@ -6,100 +6,87 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace Task5
 {
     internal class Polynomial
     {
-
-        private int constant;
-        private int power;
-        private List<Polynomial> totalList = new List<Polynomial>();
-        private int v;
-
-
-        public Polynomial(int constant, int power)
+        private int[] items;
+        public Polynomial(int[] items)
         {
-            this.constant = constant;
-            this.power = power;
-            totalList.Add(this);
+            this.items = items;
         }
 
-        public Polynomial(int constant)
+        public static Polynomial operator +(Polynomial first, Polynomial second)
         {
-            this.constant = constant;
-            totalList.Add(this);
-        }
-
-
-        public static Polynomial operator -(Polynomial i, Polynomial j)
-        {
-            j = j * -1;
-            i.getTotalList().Add(j);
-            return i;
-        }
-
-        public static Polynomial operator -(Polynomial i)
-        {
-            i = i * -1; 
-            return i;
-        }
-
-        public static Polynomial operator +(Polynomial i, Polynomial j)
-        {
-            i.getTotalList().Add(j);
-            return i;
-        }
-
-        public static Polynomial operator *(Polynomial i, int multiplikator)
-        {
-            i.setConstant(i.getConstant() * multiplikator);
-            return i;
-        }
-
-
-
-
-        public String toString()
-        {
-            String result = "";
-            foreach (var item in this.totalList)
+            int[] result = first.items.Length > second.items.Length ? first.items : second.items;
+            int[] smallest = second.items.Length > first.items.Length ? second.items : first.items;
+            for (int i = 0; i < smallest.Length; i++)
             {
-                if (item.getConstant() > 0)
+                result[i] = result[i] + smallest[i];
+            }
+            return new Polynomial(result);
+        }
+
+        public static Polynomial operator -(Polynomial first, Polynomial second)
+        {
+            int[] result = first.items.Length > second.items.Length ? first.items : second.items;
+            int[] smallest = second.items.Length > first.items.Length ? second.items : first.items;
+            for (int i = 0; i < smallest.Length; i++)
+            {
+                result[i] = result[i] - smallest[i];
+            }
+            return new Polynomial(result);
+        }
+
+        public static Polynomial operator *(Polynomial first, Polynomial second)
+        {
+            int[] result = new int[(first.items.Length + second.items.Length) - 1];
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                result[i] = 0;
+            }
+
+            for (int i = 0; i < first.items.Length; i++)
+            {
+                for (int j = 0; j < second.items.Length; j++)
                 {
-                    result = result + "+";
-                }
-                result = result + item.getConstant();
-                if (item.getPower() != 0)
-                {
-                    result = result + "x^" + item.getPower();
+                    result[i+j] += first.items[i]  * second.items[j];
                 }
             }
-            return result;
+            return new Polynomial(result);
         }
 
-
-        public List<Polynomial> getTotalList()
+        public override string ToString()
         {
-            return this.totalList;
+            StringBuilder polinomial = new StringBuilder();
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (items[i] != 0)
+                {
+                    if (items[i] > 0 && i < items.Length && i>0)
+                    {
+                        polinomial.Append("+");
+                    }
+                    polinomial.Append(items[i]);
+                    if (i >1 )
+                    {
+                        polinomial.Append("x^" + i);
+                    }
+                    if(i == 1)
+                    {
+                        polinomial.Append("x");
+                    }
+                   
+                }
+            }
+            return polinomial.ToString();
+
         }
 
-        public int getConstant()
-        {
-            return this.constant;
-        }
-
-        public int getPower()
-        {
-            return this.power;
-        }
-
-        public void setConstant(int constant)
-        {
-            this.constant = constant;
-        }
-
-
-
+        // items = [1,2,3,4]  4x^3 + 3x^2 + 2x + 1
 
     }
 }

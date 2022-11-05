@@ -8,6 +8,10 @@ namespace Task6
 {
     public abstract class Lightstring
     {
+        protected List<Bulb> bulbs;
+        public abstract void printLightstringState();
 
     }
+
+
 }
